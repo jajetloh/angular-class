@@ -1,4 +1,7 @@
-<ng-container>
-    <img (click)="onClick()" *ngIf="type === CoinType.Yellow" src="assets/coin-yellow.svg">
-    <img (click)="onClick()" *ngIf="type === CoinType.Blue" src="assets/coin-blue.svg">
+<ng-container [ngSwitch]="type">
+    <img *ngSwitchCase="CoinType.None" src="assets/coin-blank.svg">
+    <img *ngSwitchCase="CoinType.Yellow" (click)="onClick()" src="assets/coin-yellow.svg" class="c-pointer">
+    <img *ngSwitchCase="CoinType.Blue" (click)="onClick()" src="assets/coin-blue.svg" class="c-pointer">
+    <img *ngSwitchCase="CoinType.LogoYellow" (click)="onClick()" src="assets/logo-yellow.svg" width="40px" class="c-pointer">
+    <img *ngSwitchCase="CoinType.LogoBlue" src="assets/logo-blue.svg" width="40px">
 </ng-container>

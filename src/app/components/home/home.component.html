@@ -1,15 +1,16 @@
-<div class="d-flex flex-row">
-    <div class="col-2">
-
-    </div>
-    <div class="col-8">
-        <h1>What?</h1>
-        <div>
-            This is an Angular app
-        </div>
-        <app-coin [initialType]="0" [id]="0"></app-coin>
-    </div>
-    <div class="col-2">
-
-    </div>
+<h1>Welcome!</h1>
+<p>
+    This is an example web application created using the Angular framework.
+</p>
+<p>
+    Many excellent resources exist for learning Angular from scratch, so the aim of this application is to give
+    a high-level understanding of how an Angular application works. The hope is this will accelerate your
+    learning.
+</p>
+<p>
+    Some of the concepts demonstrated here are:
+</p>
+<app-data-table [properties]="contentsTableColumns" [data]="contentsTableData"></app-data-table>
+<div class="d-flex justify-content-center">
+    <app-coin [initialType]="0" [id]="0"></app-coin>
 </div>

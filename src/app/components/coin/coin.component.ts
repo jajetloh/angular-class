@@ -26,14 +26,26 @@ export class CoinComponent implements OnInit {
         console.log('onClick', this.type)
         switch (this.type) {
             case CoinType.Yellow:
-                this.coinService.registerCoinClick(1)
+                this.coinService.registerCoinClick(4)
                 this.type = CoinType.Blue
+                break
+            case CoinType.Blue:
+                this.coinService.registerCoinClick(1)
+                this.type = CoinType.None
+                break
+            case CoinType.LogoYellow:
+                this.coinService.registerCoinClick(50)
+                this.type = CoinType.LogoBlue
+                break
         }
     }
 
 }
 
 enum CoinType {
+    None = -1,
     Yellow = 0,
     Blue = 1,
+    LogoYellow = 2,
+    LogoBlue = 3,
 }
