@@ -1,11 +1,14 @@
-<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <title>background</title>
-  <rect x="-1" y="-1" width="102" height="102" id="canvas_background" fill="none"/>
- </g>
- <g>
-  <title>Layer 1</title>
-  <ellipse stroke-width="6" fill="#ffd24c" stroke="#c79500" opacity="undefined" cx="30" cy="30" id="svg_2" rx="27" ry="27"/>
-  <text font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="'menlo'" font-size="24" id="svg_1" y="41" x="8.5" stroke-dasharray="null" stroke-width="1" stroke="#c79500" fill="#c79500">˚_˚</text>
- </g>
+<svg height="60" width="60" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect fill="none" height="102" id="canvas_background" width="102" x="-1" y="-1"/>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <ellipse cx="30" cy="30" fill="#ffd24c" id="svg_2" opacity="undefined" rx="27" ry="27" stroke="#c79500"
+             stroke-width="6"/>
+    <text fill="#c79500" font-family="'menlo'" font-size="24" font-style="normal" font-weight="normal"
+          id="svg_1" stroke="#c79500" stroke-dasharray="null" stroke-width="1" text-anchor="start" x="8.5" xml:space="preserve"
+          y="41">˚_˚</text>
+  </g>
 </svg>

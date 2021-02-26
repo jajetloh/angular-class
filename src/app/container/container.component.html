@@ -1,28 +1,28 @@
 <div class="d-flex flex-column justify-content-between h-100">
-    <nav class="navbar navbar-expand-lg bg-dark c-nav-header-height">
-        <app-coin [initialType]="2"></app-coin>
-<!--        <img class="mx-3" src="../../assets/logo-blue.svg" [width]="40">-->
-        <button class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0" [routerLink]="'home'">Home
-        </button>
-        <button class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0" [routerLink]="'details'">
-            Details
-        </button>
-        <button class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0" [routerLink]="'resources'">
-            More Resources
-        </button>
-    </nav>
-    <div class="d-flex flex-row h-100">
-        <div class="col-2"></div>
-        <div class="col-8 mt-5">
-            <ng-content></ng-content>
-        </div>
-        <div class="col-2"></div>
+  <nav class="navbar navbar-expand-lg bg-dark c-nav-header-height">
+    <app-coin [initialType]="2"></app-coin>
+    <!--        <img class="mx-3" src="../../assets/logo-blue.svg" [width]="40">-->
+    <button [routerLink]="'home'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">Home
+    </button>
+    <button [routerLink]="'details'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">
+      Details
+    </button>
+    <button [routerLink]="'resources'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">
+      More Resources
+    </button>
+  </nav>
+  <div class="d-flex flex-row h-100">
+    <div class="col-2"></div>
+    <div class="col-8 mt-5">
+      <ng-content></ng-content>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary c-nav-footer-height">
-        <div class="d-flex justify-content-between w-100">
-            <span></span>
-            <span class="text-light">Score: {{score}}</span>
-        </div>
-    </nav>
+    <div class="col-2"></div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary c-nav-footer-height">
+    <div class="d-flex justify-content-between w-100">
+      <span></span>
+      <span class="text-light">Score: {{score}}</span>
+    </div>
+  </nav>
 </div>
 

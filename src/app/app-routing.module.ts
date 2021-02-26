@@ -6,16 +6,16 @@ import { DetailsComponent } from './components/details/details.component'
 import { ExternalResourcesComponent } from './components/external-resources/external-resources.component'
 
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'details', component: DetailsComponent },
-    { path: 'resources', component: ExternalResourcesComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'details', component: DetailsComponent },
+  { path: 'resources', component: ExternalResourcesComponent },
 ]
 
 @NgModule({
-    declarations: [],
-    imports: [CommonModule, RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  declarations: [],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {
 }
