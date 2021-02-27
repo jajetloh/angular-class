@@ -14,7 +14,7 @@ export class ContainerComponent implements OnInit, OnDestroy {
   coinSub: Subscription
   glowSub: Subscription
 
-  enableGlow: boolean = true
+  enableGlow: boolean = false
 
   constructor(
     private coinService: CoinService,

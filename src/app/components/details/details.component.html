@@ -6,7 +6,7 @@
     So, what are the examples and usages of Angular features in this app?
   </p>
 
-  <div class="border-bottom border-primary mb-4">
+  <div class="border-bottom border-primary my-4">
     <h2 class="text-primary">Components</h2>
   </div>
 
@@ -14,7 +14,7 @@
     <div class="w-50 mr-4">
       <p>
         Components are the basic building blocks of Angular applications, and consist of a minimum of
-        a TypeScript (.ts) file and a html template (specified in the .ts or as a separate .html file).
+        a TypeScript (.ts) file and a HTML template (specified in the .ts or as a separate .html file).
       </p>
       <p>
         Some examples of components on this page are:
@@ -32,17 +32,80 @@
         <li class="btn-link" (mouseenter)="toggleGlow('container', true)" (mouseout)="toggleGlow('container', false)">
           The header with navigation <b><i>and</i></b> the footer (these are in the same component)
         </li>
-        <li>The root component of this app, which contains all html elements and other components</li>
+        <li>The root component of this app, which contains all HTML elements and other components</li>
       </ul>
+      <p>
+        Components are implemented as classes in TypeScript, and thus can do anything a usual TypeScript class can do,
+        including extending another class, implementing interfaces, and having static attributes and methods.
+      </p>
     </div>
     <div class="w-50 ml-4">
       <app-data-table [data]="tableData" [properties]="tableProperties" [rowIndexing]="true"></app-data-table>
     </div>
   </div>
 
-
   <div class="d-flex w-100 justify-content-around">
     <app-coin *ngFor="let i of [0,1,2,3,4]" [initialType]="0"></app-coin>
   </div>
+
+  <div class="border-bottom border-primary my-4">
+    <h2 class="text-primary">Binding</h2>
+  </div>
+
+  <div class="d-flex flex-column">
+    <p>
+      Angular gives an easy way for the otherwise static HTML page to interact with code in a TypeScript file.
+    </p>
+    <p>
+      The different bindings available can be classified as:
+    </p>
+    <h3>Source to View (.ts to .html)</h3>
+    <div class="d-flex flex-row">
+      <div class="w-75">
+        <p>Variables in the component's .ts file can be dynamically used in the .html.</p>
+        <p>Examples of this include:</p>
+        <ul>
+          <li>The table on the right, where the table component is bound to the data</li>
+          <code>{{table2Data | stringify}}</code><br/>
+          in the .ts file.
+          <li [class.font-weight-bold]="textBold">The use of the <code>font-weight-bold</code> css class in this text
+            is bound to the <code>textBold</code> variable, which can be toggled with the button below.</li>
+          <button class="btn btn-outline-primary" (click)="toggleBold()">Toggle bold</button>
+        </ul>
+      </div>
+      <div class="w-25">
+        <app-data-table [data]="table2Data" [properties]="table2Properties"></app-data-table>
+      </div>
+    </div>
+
+    <h3>View to Source (.html to .ts)</h3>
+    <p>Events captured by HTML elements can trigger functions in the component's .ts file.</p>
+    <p>Some examples are:</p>
+    <ul>
+      <li [class.font-weight-bold]="textBold">Clicking of the button below is bound to toggling the <code>textBold</code> variable.</li>
+      <button class="btn btn-outline-primary" (click)="toggleBold()">Toggle bold</button>
+      <li class="btn-link" (mouseenter)="toggleGlow('table', true)" (mouseleave)="toggleGlow('table', false)">The detection of the cursor entering/leaving this text, triggering a sequence of functions which eventually
+        triggers a class binding, causing tables to glow.</li>
+    </ul>
+
+    <h3>Two way</h3>
+    <p>Variables in the .ts can be shown in an input field in the .html, and changes to this input dynamically change
+      the variable's value in the .ts.</p>
+    <p>An example is:</p>
+    <ul>
+      <li>The below text input is bound to the <code>twoWayBindData</code> variable, and so begins with the initial
+      values specified by the .ts file. This variable can also be modified using the autofill buttons, and these changes
+      reflect immediately in the input box, and also the table bound to <code>twoWayBindDAta</code>.</li>
+      <div class="d-flex justify-content-between mb-2">
+        <input class="form-control form-check-inline" type='text' [(ngModel)]="twoWayBindData">
+        <button class="btn btn-outline-primary btn-sm w-25 mr-2" (click)="twoWayBindData = 'Some pre-determined text'">Autofill 1</button>
+        <button class="btn btn-outline-primary w-25" (click)="twoWayBindData = 'What are you expecting?'">Autofill 2</button>
+      </div>
+      <app-data-table [data]="[{row: 1, text: twoWayBindData}]" [properties]="['row', 'text']"></app-data-table>
+    </ul>
+
+  </div>
+
+
 </div>
 

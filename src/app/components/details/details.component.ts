@@ -21,6 +21,16 @@ export class DetailsComponent extends GlowableComponent implements OnInit, OnDes
   ]
   tableProperties = ['colour', 'length', 'type']
 
+  table2Data = [
+    { a: 1, b: 2 },
+    { a: 'C', b: 'J' },
+  ]
+  table2Properties = ['a', 'b']
+
+  textBold = false
+
+  twoWayBindData = 'Default text the from .ts file'
+
   constructor(
     protected glowService: GlowService
   ) {
@@ -37,6 +47,10 @@ export class DetailsComponent extends GlowableComponent implements OnInit, OnDes
 
   toggleGlow(id: string, state: boolean): void {
     this.glowService.toggleGlow(id, state)
+  }
+
+  toggleBold() {
+    this.textBold = !this.textBold
   }
 
 }

@@ -4,8 +4,9 @@ import { CoinComponent } from './coin/coin.component'
 import { HomeComponent } from './home/home.component'
 import { DetailsComponent } from './details/details.component'
 import { DataTableComponent } from './data-table/data-table.component'
-import { CamelToStartCasePipe } from './data-table/camel-to-start-case.pipe'
 import { ExternalResourcesComponent } from './external-resources/external-resources.component'
+import { PipesModule } from '../pipes/pipes.module'
+import { FormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -14,11 +15,12 @@ import { ExternalResourcesComponent } from './external-resources/external-resour
     HomeComponent,
     DetailsComponent,
     DataTableComponent,
-    CamelToStartCasePipe,
     ExternalResourcesComponent,
   ],
   imports: [
     CommonModule,
+    PipesModule,
+    FormsModule,
   ],
   exports: [
     CoinComponent,
