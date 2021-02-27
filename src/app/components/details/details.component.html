@@ -1,7 +1,48 @@
-<h1>This page is a work in progress!</h1>
+<div [class.c-glow]="enableGlow">
+  <div class="border-bottom border-dark mb-4">
+    <h1 class="text-dark">Details</h1>
+  </div>
+  <p>
+    So, what are the examples and usages of Angular features in this app?
+  </p>
 
-<app-data-table [data]="tableData" [properties]="tableProperties" [rowIndexing]="true"></app-data-table>
+  <div class="border-bottom border-primary mb-4">
+    <h2 class="text-primary">Components</h2>
+  </div>
 
-<div class="d-flex w-100 justify-content-around">
-  <app-coin *ngFor="let i of [0,1,2,3,4]" [initialType]="0"></app-coin>
+  <div class="d-flex flex-row">
+    <div class="w-50 mr-4">
+      <p>
+        Components are the basic building blocks of Angular applications, and consist of a minimum of
+        a TypeScript (.ts) file and a html template (specified in the .ts or as a separate .html file).
+      </p>
+      <p>
+        Some examples of components on this page are:
+      </p>
+      <ul>
+        <li class="btn-link" (mouseenter)="toggleGlow('table', true)" (mouseout)="toggleGlow('table', false)">The table
+          to the right
+        </li>
+        <li class="btn-link" (mouseenter)="toggleGlow('coin', true)" (mouseout)="toggleGlow('coin', false)">The yellow
+          coins (each is an instance of the same component)
+        </li>
+        <li class="btn-link" (mouseenter)="toggleGlow('details', true)" (mouseout)="toggleGlow('details', false)">This
+          central page content
+        </li>
+        <li class="btn-link" (mouseenter)="toggleGlow('container', true)" (mouseout)="toggleGlow('container', false)">
+          The header with navigation <b><i>and</i></b> the footer (these are in the same component)
+        </li>
+        <li>The root component of this app, which contains all html elements and other components</li>
+      </ul>
+    </div>
+    <div class="w-50 ml-4">
+      <app-data-table [data]="tableData" [properties]="tableProperties" [rowIndexing]="true"></app-data-table>
+    </div>
+  </div>
+
+
+  <div class="d-flex w-100 justify-content-around">
+    <app-coin *ngFor="let i of [0,1,2,3,4]" [initialType]="0"></app-coin>
+  </div>
 </div>
+
