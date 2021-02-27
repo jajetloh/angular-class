@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { CoinService } from './coin.service'
+import { Component, Input, OnDestroy, OnInit } from '@angular/core'
+import { CoinService } from '../../services/coin.service'
+import { GlowService } from '../../services/glow.service'
+import { GlowableComponent } from '../glowable/glowable.component'
 
 @Component({
   selector: 'app-coin',
@@ -7,7 +9,7 @@ import { CoinService } from './coin.service'
   styleUrls: ['./coin.component.css']
 })
 
-export class CoinComponent implements OnInit {
+export class CoinComponent extends GlowableComponent implements OnInit, OnDestroy {
 
   @Input() initialType: CoinType = CoinType.Yellow
   @Input() id: any
@@ -15,15 +17,23 @@ export class CoinComponent implements OnInit {
   type: CoinType
   CoinType = CoinType
 
-  constructor(private coinService: CoinService) {
+  constructor(
+    private coinService: CoinService,
+    protected glowService: GlowService) {
+    super(glowService)
   }
 
   ngOnInit(): void {
     this.type = this.initialType
+
+    this.registerComponent('coin')
+  }
+
+  ngOnDestroy(): void {
+    super.ngOnDestroy()
   }
 
   onClick(): void {
-    console.log('onClick', this.type)
     switch (this.type) {
       case CoinType.Yellow:
         this.coinService.registerCoinClick(4)

@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core'
 })
 export class HomeComponent implements OnInit {
 
-
   contentsTableColumns = ['concept', 'details']
   contentsTableData = [
     { concept: 'Components', details: 'Examples of components, and how they can interact with each other.' },
+    { concept: 'Binding', details: 'Angular\'s automatic interaction between html templates and TypeScript code for components.' },
     { concept: 'Services', details: 'Usage of services across components and routes' },
     { concept: 'Pipes', details: 'Transformation of objects in html interpolation' },
   ]

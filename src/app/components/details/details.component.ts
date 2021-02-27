@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
+import { GlowService } from '../../services/glow.service'
+import { GlowableComponent } from '../glowable/glowable.component'
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent extends GlowableComponent implements OnInit, OnDestroy {
 
   tableData = [
     { colour: 'Yellow', length: 6, type: 'Primary' },
@@ -19,11 +21,22 @@ export class DetailsComponent implements OnInit {
   ]
   tableProperties = ['colour', 'length', 'type']
 
-  constructor() {
+  constructor(
+    protected glowService: GlowService
+  ) {
+    super(glowService)
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit details')
+    this.registerComponent('details')
+  }
+
+  ngOnDestroy(): void {
+    super.ngOnDestroy()
+  }
+
+  toggleGlow(id: string, state: boolean): void {
+    this.glowService.toggleGlow(id, state)
   }
 
 }
