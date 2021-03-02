@@ -7,6 +7,7 @@ import { DataTableComponent } from './data-table/data-table.component'
 import { ExternalResourcesComponent } from './external-resources/external-resources.component'
 import { PipesModule } from '../pipes/pipes.module'
 import { FormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router'
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms'
     CommonModule,
     PipesModule,
     FormsModule,
+    RouterModule,
   ],
   exports: [
     CoinComponent,

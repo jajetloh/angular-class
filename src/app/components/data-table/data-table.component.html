@@ -12,7 +12,7 @@
       <ng-container *ngIf="isLink(row[property])"><a [href]="row[property].url"
                                                      target="_blank">{{ row[property].text || row[property].url }}</a>
       </ng-container>
-      <ng-container *ngIf="!isLink(row[property])">{{row[property] || '?'}}</ng-container>
+      <ng-container *ngIf="!isLink(row[property])">{{row[property] || ''}}</ng-container>
     </td>
   </tr>
   </tbody>

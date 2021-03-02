@@ -19,7 +19,8 @@ export class CoinComponent extends GlowableComponent implements OnInit, OnDestro
 
   constructor(
     private coinService: CoinService,
-    protected glowService: GlowService) {
+    protected glowService: GlowService
+  ) {
     super(glowService)
   }
 
@@ -47,6 +48,10 @@ export class CoinComponent extends GlowableComponent implements OnInit, OnDestro
         this.coinService.registerCoinClick(50)
         this.type = CoinType.LogoBlue
         break
+      case CoinType.Silver:
+        this.coinService.registerCoinClick(100)
+        this.type = CoinType.Yellow
+        break
     }
   }
 
@@ -58,4 +63,5 @@ enum CoinType {
   Blue = 1,
   LogoYellow = 2,
   LogoBlue = 3,
+  Silver = 4,
 }

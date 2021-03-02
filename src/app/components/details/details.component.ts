@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
 import { GlowService } from '../../services/glow.service'
 import { GlowableComponent } from '../glowable/glowable.component'
+import { range } from 'lodash'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-details',
@@ -31,14 +33,32 @@ export class DetailsComponent extends GlowableComponent implements OnInit, OnDes
 
   twoWayBindData = 'Default text the from .ts file'
 
+  showTable = true
+  directivesTableData = [
+    { quantity: 5, adjective: 'Golden', noun: 'Rings' },
+    { quantity: 4, adjective: 'Calling', noun: 'Birds' },
+    { quantity: 3, adjective: 'French', noun: 'Pens' },
+    { quantity: 2, adjective: 'Daffy', noun: 'Ducks' },
+    { quantity: 1, noun: 'Foie Gras in my belly' },
+  ]
+  directivesTableProperties = ['quantity', 'adjective', 'noun']
+
+  coinCount = 2
+
   constructor(
-    protected glowService: GlowService
+    protected glowService: GlowService,
+    private route: ActivatedRoute,
   ) {
     super(glowService)
   }
 
   ngOnInit(): void {
     this.registerComponent('details')
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        document.querySelector('#' + fragment).scrollIntoView()
+      }
+    })
   }
 
   ngOnDestroy(): void {
@@ -51,6 +71,10 @@ export class DetailsComponent extends GlowableComponent implements OnInit, OnDes
 
   toggleBold() {
     this.textBold = !this.textBold
+  }
+
+  range(n: number) {
+    return range(n)
   }
 
 }

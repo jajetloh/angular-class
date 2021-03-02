@@ -11,8 +11,9 @@ export class HomeComponent implements OnInit {
   contentsTableData = [
     { concept: 'Components', details: 'Examples of components, and how they can interact with each other.' },
     { concept: 'Binding', details: 'Angular\'s automatic interaction between HTML templates and TypeScript code for components.' },
-    { concept: 'Services', details: 'Usage of services across components and routes' },
-    { concept: 'Pipes', details: 'Transformation of objects in HTML interpolation' },
+    { concept: 'Directives', details: 'Angular\'s feature to dynamically manipulate HTML templates.' },
+    { concept: 'Services', details: 'Usage of services across components and routes.' },
+    { concept: 'Pipes', details: 'Transformation of objects in HTML interpolation.' },
   ]
 
   constructor() {

@@ -22,6 +22,13 @@ export class ExternalResourcesComponent implements OnInit {
       description: 'Very comprehensive tutorial for a more complex app.'
     },
     {
+      name: { url: 'https://angular.io/guide/rx-library', text: 'Angular Docs: RxJS summary' },
+      description: 'Examples of Observables and other RxJS functionality in Angular.'
+    }
+  ]
+
+  resourcesDataOther = [
+    {
       name: { url: 'https://ng-bootstrap.github.io/#/components', text: 'NgBootstrap' },
       description: 'Wrapper and extension for Bootstrap, a common library/framework for styling HTML pages and elements.'
     },
@@ -38,8 +45,8 @@ export class ExternalResourcesComponent implements OnInit {
       description: 'List of RxJS objects. Pages for Observables such as combineLatest, forkJoin, first, concat, merge have visual representations.'
     },
     {
-      name: { url: 'https://angular.io/guide/rx-library', text: 'Angular Docs: RxJS summary' },
-      description: 'Examples of Observables and other RxJS functionality in Angular.'
+      name: { url: 'https://lodash.com/', text: 'Lodash' },
+      description: 'A comprehensive library with many general utilities for JavaScript.'
     }
   ]
 
