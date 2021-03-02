@@ -47,6 +47,10 @@ export class ExternalResourcesComponent implements OnInit {
     {
       name: { url: 'https://lodash.com/', text: 'Lodash' },
       description: 'A comprehensive library with many general utilities for JavaScript.'
+    },
+    {
+      name: { url: 'https://blog.asayer.io/how-to-debug-angular-apps-with-chrome-devtools', text: 'Debugging with Chrome DevTools' },
+      description: 'A solid summary of (very) useful features in Google Chrome\'s built-in debugger. Familiarity with the these features is a necessity in developing complex applications.'
     }
   ]
 
