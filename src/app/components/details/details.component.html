@@ -75,7 +75,7 @@
         <p>Examples of this include:</p>
         <ul>
           <li>The table on the right, where the table component is bound to the data</li>
-          <code>{{table2Data | stringify}}</code><br/>
+          <code>{{table2Data | json}}</code><br/>
           in the .ts file.
           <li [class.font-weight-bold]="textBold">The use of the <code>font-weight-bold</code> css class in this text
             is bound to the <code>textBold</code> variable, which can be toggled with the button below.</li>
@@ -222,11 +222,49 @@
 
   <div class="d-flex flex-row">
     <div class="w-100">
-      <p>To be continued!</p>
+      <p>
+        Angular pipes are used to transform objects, most often to be displayed on a page. The table below shows the
+        usage of some pipes.
+      </p>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr class="text-light bg-secondary">
+          <th>Input</th>
+          <th>Pipe</th>
+          <th>Output</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{pipeExampleInputs[0]}}</td>
+          <td><code>uppercase</code></td>
+          <td>{{pipeExampleInputs[0] | uppercase}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><code>startCase</code> (custom pipe)</td>
+          <td>{{pipeExampleInputs[0] | startCase}}</td>
+        </tr>
+        <tr>
+          <td>{{pipeExampleInputs[1]}}</td>
+          <td><code>json</code></td>
+          <td>{{pipeExampleInputs[1] | json}}</td>
+        </tr>
+        <tr>
+          <td>JS Date object: {{pipeExampleInputs[2]}}</td>
+          <td><code>date</code></td>
+          <td>{{pipeExampleInputs[2] | date}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><code>date : 'short'</code></td>
+          <td>{{pipeExampleInputs[2] | date : 'short'}}</td>
+        </tr>
+        </tbody>
+      </table>
       <!-- For spacing-->
       <div class="my-5"></div>
     </div>
   </div>
-
 </div>
 

@@ -45,6 +45,8 @@ export class DetailsComponent extends GlowableComponent implements OnInit, OnDes
 
   coinCount = 2
 
+  pipeExampleInputs: any[] = ['myString', { name: 'J', value: -9 }, new Date(), new Date()]
+
   constructor(
     protected glowService: GlowService,
     private route: ActivatedRoute,

@@ -2,9 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core'
 import { startCase } from 'lodash'
 
 @Pipe({
-  name: 'camelToStartCase'
+  name: 'startCase'
 })
-export class CamelToStartCasePipe implements PipeTransform {
+export class StartCasePipe implements PipeTransform {
 
   transform(value: string): unknown {
     return startCase(value)

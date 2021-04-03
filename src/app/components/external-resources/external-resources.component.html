@@ -1,11 +1,17 @@
-<h1>External Resources</h1>
-<p>
-  Many excellent resources already exist for learning and as a reference specifically for Angular. As such, the
-  table below summarises a selection of these materials.
-</p>
-<app-data-table [data]="resourcesData" [properties]="resourcesColumns"></app-data-table>
-<p class="mt-5">
-  The following resources are for commonly used libraries, techniques and/or concepts in web development, and are
-  also worth looking to improve your proficiency in developing in Angular.
-</p>
-<app-data-table [data]="resourcesDataOther" [properties]="resourcesColumns"></app-data-table>
+<div class="d-flex flex-column">
+  <h1>External Resources</h1>
+  <p>
+    Many excellent resources already exist for learning and as a reference specifically for Angular. As such, the
+    table below summarises a selection of these materials.
+  </p>
+  <app-data-table [data]="resourcesData" [properties]="resourcesColumns"></app-data-table>
+  <p class="mt-5">
+    The following resources are for commonly used libraries, techniques and/or concepts in web development, and are
+    also worth looking to improve your proficiency in developing in Angular.
+  </p>
+  <app-data-table [data]="resourcesDataOther" [properties]="resourcesColumns"></app-data-table>
+
+  <!-- For spacing-->
+  <div class="my-5"></div>
+
+</div>

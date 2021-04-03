@@ -51,7 +51,11 @@ export class ExternalResourcesComponent implements OnInit {
     {
       name: { url: 'https://blog.asayer.io/how-to-debug-angular-apps-with-chrome-devtools', text: 'Debugging with Chrome DevTools' },
       description: 'A solid summary of (very) useful features in Google Chrome\'s built-in debugger. Familiarity with the these features is a necessity in developing complex applications.'
-    }
+    },
+    {
+      name: { url: 'https://christiankohler.net/angular-dependency-injection-infographic', text: 'Dependency Injection Infographic' },
+      description: 'Visual guide and technical explanation of how dependency injection (services and more general injectables) work and are used.'
+    },
   ]
 
   constructor() {

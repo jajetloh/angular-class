@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { StringifyPipe } from './stringify.pipe'
-import { CamelToStartCasePipe } from './camel-to-start-case.pipe'
+import { StartCasePipe } from './start-case.pipe'
 
 
 @NgModule({
   declarations: [
-    StringifyPipe,
-    CamelToStartCasePipe
+    StartCasePipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    StringifyPipe,
-    CamelToStartCasePipe
+    StartCasePipe
   ],
 })
 export class PipesModule {

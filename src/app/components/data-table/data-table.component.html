@@ -2,7 +2,7 @@
   <thead>
   <tr class="text-light bg-secondary">
     <th *ngIf="rowIndexing">#</th>
-    <th *ngFor="let property of properties">{{property | camelToStartCase}}</th>
+    <th *ngFor="let property of properties">{{property | startCase}}</th>
   </tr>
   </thead>
   <tbody>
