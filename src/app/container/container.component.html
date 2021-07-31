@@ -1,11 +1,13 @@
 <div class="d-flex flex-column justify-content-between h-100">
   <nav class="navbar navbar-expand-lg bg-dark c-nav-header-height" [class.c-glow]="enableGlow">
     <app-coin [initialType]="2"></app-coin>
-    <!--        <img class="mx-3" src="../../assets/logo-blue.svg" [width]="40">-->
     <button [routerLink]="'home'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">Home
     </button>
     <button [routerLink]="'details'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">
       Details
+    </button>
+    <button [routerLink]="'exercises'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">
+      Exercises
     </button>
     <button [routerLink]="'resources'" class="btn btn-outline-primary text-light mx-3 font-weight-bold border-0">
       More Resources

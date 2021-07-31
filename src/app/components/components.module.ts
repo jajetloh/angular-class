@@ -7,7 +7,10 @@ import { DataTableComponent } from './data-table/data-table.component'
 import { ExternalResourcesComponent } from './external-resources/external-resources.component'
 import { PipesModule } from '../pipes/pipes.module'
 import { FormsModule } from '@angular/forms'
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
+import { ExercisesComponent } from './exercises/exercises.component'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ExerciseOneComponent } from './exercises/exercise-one/exercise-one.component'
 
 
 @NgModule({
@@ -17,12 +20,15 @@ import { RouterModule } from '@angular/router'
     DetailsComponent,
     DataTableComponent,
     ExternalResourcesComponent,
+    ExercisesComponent,
+    ExerciseOneComponent,
   ],
   imports: [
     CommonModule,
     PipesModule,
     FormsModule,
     RouterModule,
+    NgbModule,
   ],
   exports: [
     CoinComponent,
