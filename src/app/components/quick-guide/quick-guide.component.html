@@ -1,16 +1,17 @@
 <div [class.c-glow]="enableGlow">
   <div class="border-bottom border-dark mb-4">
-    <h1 class="text-dark">Details</h1>
+    <h1 class="text-dark">Quick Guide</h1>
   </div>
   <p>
     So, what are the examples and usages of Angular features in this app?
   </p>
   <ul>
-    <li><a href="details#components">Components</a></li>
-    <li><a href="details#binding">Binding</a></li>
-    <li><a href="details#directives">Directives</a></li>
-    <li><a href="details#services">Services</a></li>
-    <li><a href="details#pipes">Pipes</a></li>
+    <li><a href="quick-guide#components">Components</a></li>
+    <li><a href="quick-guide#binding">Binding</a></li>
+    <li><a href="quick-guide#directives">Directives</a></li>
+    <li><a href="quick-guide#services">Services</a></li>
+    <li><a href="quick-guide#pipes">Pipes</a></li>
+    <li><a href="quick-guide#modules">Modules</a></li>
   </ul>
 
   <div class="border-bottom border-primary my-4">
@@ -124,16 +125,16 @@
   <div class="d-flex flex-row">
     <div class="w-100">
       <p>
-        Directives can be considered to be ways in which the HTML content of a page can be altered. Components
+        Directives can be considered to be ways in which the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> can be altered. Components
         themselves can be considered directives, but here we describe the other two types of directives:
         <b>structural</b> and <b>attribute</b>.
       </p>
       <p>
-        <b>Structural directives</b> alter the occurrence of HTML elements on a page. Some examples are:
+        <b>Structural directives</b> alter the occurrence of elements in the DOM. Some examples are:
       </p>
       <ul>
         <li><code>*ngIf</code></li>
-        This allows elements to be added/removed from the HTML according to a boolean value. For example, The table
+        This allows elements to be added/removed from the DOM according to a boolean value. For example, The table
         below can be added/removed using this button:
         <br/>
         <div class="d-flex flex-column align-items-center">
@@ -145,7 +146,7 @@
           </div>
         </div>
         <li class="mt-4"><code>*ngFor</code></li>
-        This allows iteration of HTML elements according to an iterable. For example, the number of coins below is
+        This allows iteration of DOM elements according to an iterable. For example, the number of coins below is
         determined by the value of <code>coinCount</code>, which is two-way-bound to this input:
         <br/>
         <input class="form-control form-control-sm w-25" type="number" min="0" max="12" step="1" [(ngModel)]="coinCount">
@@ -160,7 +161,7 @@
         of objects to populate the table.</span>
         <li class="mt-4"><code>[ngSwitch]</code>, <code>*ngSwitchCase</code>, <code>*ngSwitchDefault</code></li>
         This behaves like similarly to the <code>*ngIf</code> structural directive, except with the usual <code>switch</code>
-        functionality. Depending on the number of coins above, different HTML elements are rendered below.
+        functionality. Depending on the number of coins above, different DOM elements are rendered below.
         <div class="d-flex w-100 justify-content-center my-3" [ngSwitch]="coinCount">
           <app-coin *ngSwitchCase="0" [initialType]="4"></app-coin>
           <button *ngSwitchCase="2" class="btn btn-outline-secondary" [routerLink]="'/home'">Back to Home</button>
@@ -261,9 +262,39 @@
         </tr>
         </tbody>
       </table>
-      <!-- For spacing-->
-      <div class="my-5"></div>
     </div>
   </div>
+
+  <div class="border-bottom border-primary my-4">
+    <h2 class="text-primary" id="modules">Modules</h2>
+  </div>
+
+  <div class="d-flex flex-row">
+    <div class="w-100">
+      <p>
+        Modules are another more abstract concept, and are a way of organising Angular objects (e.g. components,
+        custom directives, pipes, services) into groups. This can be useful in larger projects for organising
+        code for easier development, but also to help Angular only load components etc. when they are required on the
+        page.
+      </p>
+      <p>
+        Angular projects have a root module (<code>app.module.ts</code>). This root module 'contains' other modules
+        by importing them, and these imported modules can import modules themselves, ad infinitum.
+      </p>
+      <p>
+        This particular app is relatively small, and so modules are used for organisation, and not so much for any
+        functional benefits.
+      </p>
+      <p>
+        <b>Routing Modules</b> are a special case, as they import Angular's <code>RouterModule</code> allowing us to
+        load components and modules based on the current route. In this app, <code>app-routing.module</code> specifies
+        that <code>/quick-guide</code> loads the <code>QuickGuideComponent</code>, or that <code>/home</code> loads
+        <code>HomeComponent</code> and so on.
+      </p>
+    </div>
+  </div>
+
+  <!-- For spacing -->
+  <div class="my-5">&nbsp;</div>
 </div>
 

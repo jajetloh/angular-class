@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-exercise-one',
@@ -6,6 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercise-one.component.css']
 })
 export class ExerciseOneComponent implements OnInit {
+
+  // Class variables are declared here, above constructor()
+
+  imageDescriptions = [
+    'An open window',
+    'A novel',
+    'A couple holding hands',
+    'An avocado',
+    'A poem written in the sand',
+  ]
 
   constructor() { }
 

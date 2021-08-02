@@ -5,11 +5,11 @@ import { range } from 'lodash'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  selector: 'app-quick-guide',
+  templateUrl: './quick-guide.component.html',
+  styleUrls: ['./quick-guide.component.css']
 })
-export class DetailsComponent extends GlowableComponent implements OnInit, OnDestroy {
+export class QuickGuideComponent extends GlowableComponent implements OnInit, OnDestroy {
 
   tableData = [
     { colour: 'Yellow', length: 6, type: 'Primary' },
