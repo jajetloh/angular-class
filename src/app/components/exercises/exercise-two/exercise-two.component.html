@@ -1,4 +1,29 @@
-<p>exercise-two works!</p>
+<div>
+  <div class="mb-2">
 
-<input type="number" [(ngModel)]="valueOne" (change)="onValueOneChange()">
-<input type="number" [(ngModel)]="valueTwo" (change)="onValueTwoChange()">
+  </div>
+
+  <div class="mb-5">
+    <h5 class="text-primary border-bottom border-primary">Exercise 2.1.</h5>
+    <p>Another very common task is to collect user input to perform actions based on the input. In this task, we will
+    be creating input fields which convert amounts between different units.</p>
+    <p></p>
+    <!-- Your code here -->
+
+    <input type="number" [(ngModel)]="valueOne" (change)="onValueOneChange()">
+    <select [(ngModel)]="selectedUnit1" (change)="onValueOneChange()">
+      <option *ngFor="let unit of lengthUnits">{{unit}}</option>
+    </select>
+
+    =
+
+    <input type="number" [(ngModel)]="valueTwo" (change)="onValueTwoChange()">
+    <select [(ngModel)]="selectedUnit2" (change)="onValueTwoChange()">
+      <option *ngFor="let unit of lengthUnits">{{unit}}</option>
+    </select>
+  </div>
+  <div class="mb-5">&nbsp;</div>
+
+
+
+</div>
