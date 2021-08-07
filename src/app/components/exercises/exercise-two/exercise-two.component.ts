@@ -21,12 +21,12 @@ const lengthUnits = {
 export class ExerciseTwoComponent implements OnInit {
 
   valueOne: number = 1
-  valueTwo: number = 2
+  valueTwo: number = 1000
 
   selectedUnit1: string = 'm'
-  selectedUnit2: string = 'm'
+  selectedUnit2: string = 'mm'
 
-  lengthUnits: string[] = Object.keys(lengthUnits)
+  lengthUnitsKeys: string[] = Object.keys(lengthUnits)
 
   constructor() {
   }

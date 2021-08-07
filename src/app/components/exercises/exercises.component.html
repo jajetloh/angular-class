@@ -2,21 +2,21 @@
   <div class="border-bottom border-dark mb-4">
     <h1 class="text-dark">Exercises</h1>
   </div>
-  <nav ngbNav #nav="ngbNav" class="nav-tabs">
-    <ng-container ngbNavItem>
-      <a ngbNavLink>One</a>
+  <nav ngbNav #nav="ngbNav" class="nav-tabs" [activeId]="route.fragment | async">
+    <ng-container [ngbNavItem]="'one'">
+      <a ngbNavLink routerLink="." [fragment]="'one'">One</a>
       <ng-template ngbNavContent>
         <app-exercise-one></app-exercise-one>
       </ng-template>
     </ng-container>
-    <ng-container ngbNavItem>
-      <a ngbNavLink>Two</a>
+    <ng-container [ngbNavItem]="'two'">
+      <a ngbNavLink routerLink="." [fragment]="'two'">Two</a>
       <ng-template ngbNavContent>
         <app-exercise-two></app-exercise-two>
       </ng-template>
     </ng-container>
-    <ng-container ngbNavItem>
-      <a ngbNavLink>Three</a>
+    <ng-container [ngbNavItem]="'three'">
+      <a ngbNavLink routerLink="." [fragment]="'three'">Three</a>
       <ng-template ngbNavContent>
         <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
           Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.

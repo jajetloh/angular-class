@@ -6,20 +6,25 @@
   <div class="mb-5">
     <h5 class="text-primary border-bottom border-primary">Exercise 2.1.</h5>
     <p>Another very common task is to collect user input to perform actions based on the input. In this task, we will
-    be creating input fields which convert amounts between different units.</p>
-    <p></p>
+    be creating input fields which convert amounts between different units. The following steps will guide you through
+    one implementation of this.</p>
+    <ol>
+      <li>
+        Add an <code>input</code> element below, and a <code>select</code>
+      </li>
+    </ol>
     <!-- Your code here -->
 
     <input type="number" [(ngModel)]="valueOne" (change)="onValueOneChange()">
     <select [(ngModel)]="selectedUnit1" (change)="onValueOneChange()">
-      <option *ngFor="let unit of lengthUnits">{{unit}}</option>
+      <option *ngFor="let unit of lengthUnitsKeys">{{unit}}</option>
     </select>
 
     =
 
     <input type="number" [(ngModel)]="valueTwo" (change)="onValueTwoChange()">
     <select [(ngModel)]="selectedUnit2" (change)="onValueTwoChange()">
-      <option *ngFor="let unit of lengthUnits">{{unit}}</option>
+      <option *ngFor="let unit of lengthUnitsKeys">{{unit}}</option>
     </select>
   </div>
   <div class="mb-5">&nbsp;</div>
