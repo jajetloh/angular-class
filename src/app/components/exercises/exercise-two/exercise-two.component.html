@@ -4,17 +4,34 @@
   </div>
 
   <div class="mb-5">
-    <h5 class="text-primary border-bottom border-primary">Exercise 2.1.</h5>
+    <h5 class="text-primary border-bottom border-primary">Exercise 2.</h5>
     <p>Another very common task is to collect user input to perform actions based on the input. In this task, we will
     be creating input fields which convert amounts between different units. The following steps will guide you through
     one implementation of this.</p>
     <ol>
       <li>
-        Add an <code>input</code> element below, and a <code>select</code>
+        Add an <code>input</code> element below with an argument <code>type="number"</code> (to create a numerical input cell),
+        a <code>select</code> element, and a couple of <code>option</code> elements inside the <code>select</code>. The options
+        will be empty by default, so put some text inside each <code>option</code> element so the dropdown will show these.
+      </li>
+      <li>
+        Add two-way binding to the <code>input</code> and <code>select</code> elements using <code>[(ngModel)]</code>.
+        You'll need to create variables in the <code>.ts</code> file to bind to the values of these inputs. You can check
+        this is correct by using interpolation to display the variables you have created, using <code [innerHTML]="'{{ myVarName }}'"></code>.
+      </li>
+      <li>
+        The variable <code>lengthUnitsKeys</code> is an array of strings, each being a different unit. Use an <code>*ngFor</code>
+        directive to replace the current <code>option</code> elements with the given units.
+      </li>
+      <li>
+        We now have a functioning input pair, for a number and a unit! Create a second pair of inputs, including separate
+        variables, but still using <code>lengthUnitsKeys</code> as the list of units.
+      </li>
+      <li>
+        All that remains is to set up the interaction between the input pairs.
       </li>
     </ol>
     <!-- Your code here -->
-
     <input type="number" [(ngModel)]="valueOne" (change)="onValueOneChange()">
     <select [(ngModel)]="selectedUnit1" (change)="onValueOneChange()">
       <option *ngFor="let unit of lengthUnitsKeys">{{unit}}</option>
