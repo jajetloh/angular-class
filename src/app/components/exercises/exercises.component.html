@@ -4,27 +4,27 @@
   </div>
   <nav ngbNav #nav="ngbNav" class="nav-tabs" [activeId]="route.fragment | async">
     <ng-container [ngbNavItem]="'one'">
-      <a ngbNavLink routerLink="." [fragment]="'one'">One</a>
+      <a ngbNavLink routerLink="." [fragment]="'one'">Exercise One</a>
       <ng-template ngbNavContent>
         <app-exercise-one></app-exercise-one>
       </ng-template>
     </ng-container>
+    <ng-container [ngbNavItem]="'one-solution'">
+      <a ngbNavLink routerLink="." [fragment]="'one-solution'">Solution One</a>
+      <ng-template ngbNavContent>
+        <app-exercise-one-solution></app-exercise-one-solution>
+      </ng-template>
+    </ng-container>
     <ng-container [ngbNavItem]="'two'">
-      <a ngbNavLink routerLink="." [fragment]="'two'">Two</a>
+      <a ngbNavLink routerLink="." [fragment]="'two'">Exercise Two</a>
       <ng-template ngbNavContent>
         <app-exercise-two></app-exercise-two>
       </ng-template>
     </ng-container>
-    <ng-container [ngbNavItem]="'three'">
-      <a ngbNavLink routerLink="." [fragment]="'three'">Three</a>
+    <ng-container [ngbNavItem]="'two-solution'">
+      <a ngbNavLink routerLink="." [fragment]="'two-solution'">Solution Two</a>
       <ng-template ngbNavContent>
-        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-          Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-          Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-          egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-          tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-          magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-          neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+        <app-exercise-two-solution></app-exercise-two-solution>
       </ng-template>
     </ng-container>
   </nav>

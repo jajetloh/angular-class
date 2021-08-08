@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core'
 export class ExternalResourcesComponent implements OnInit {
 
   resourcesColumns = ['name', 'description']
+
   resourcesData = [
     {
       name: { url: 'https://angular.io/docs', text: 'Angular Docs' },
@@ -24,7 +25,11 @@ export class ExternalResourcesComponent implements OnInit {
     {
       name: { url: 'https://angular.io/guide/rx-library', text: 'Angular Docs: RxJS summary' },
       description: 'Examples of Observables and other RxJS functionality in Angular.'
-    }
+    },
+    {
+      name: { url: 'https://angular.io/guide/example-apps-list', text: 'Angular Docs: Example applications' },
+      description: 'A list of example applications, each demonstrating different concepts.'
+    },
   ]
 
   resourcesDataOther = [

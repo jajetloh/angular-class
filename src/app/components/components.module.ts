@@ -7,11 +7,13 @@ import { DataTableComponent } from './data-table/data-table.component'
 import { ExternalResourcesComponent } from './external-resources/external-resources.component'
 import { PipesModule } from '../pipes/pipes.module'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router'
 import { ExercisesComponent } from './exercises/exercises.component'
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ExerciseOneComponent } from './exercises/exercise-one/exercise-one.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { ExerciseOneComponent } from './exercises/exercise-one/exercise-one.component'
 import { ExerciseTwoComponent } from './exercises/exercise-two/exercise-two.component'
+import { ExerciseTwoSolutionComponent } from './exercises/exercise-two-solution/exercise-two-solution.component'
+import { ExerciseOneSolutionComponent } from './exercises/exercise-one-solution/exercise-one-solution.component'
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ExerciseTwoComponent } from './exercises/exercise-two/exercise-two.comp
     ExternalResourcesComponent,
     ExercisesComponent,
     ExerciseOneComponent,
+    ExerciseOneSolutionComponent,
     ExerciseTwoComponent,
+    ExerciseTwoSolutionComponent,
   ],
   imports: [
     CommonModule,

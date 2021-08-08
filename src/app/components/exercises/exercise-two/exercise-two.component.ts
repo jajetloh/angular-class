@@ -20,26 +20,12 @@ const lengthUnits = {
 })
 export class ExerciseTwoComponent implements OnInit {
 
-  valueOne: number = 1
-  valueTwo: number = 1000
-
-  selectedUnit1: string = 'm'
-  selectedUnit2: string = 'mm'
-
   lengthUnitsKeys: string[] = Object.keys(lengthUnits)
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  onValueOneChange() {
-    this.valueTwo = this.valueOne / lengthUnits[this.selectedUnit2] * lengthUnits[this.selectedUnit1]
-  }
-
-  onValueTwoChange() {
-    this.valueOne = this.valueTwo / lengthUnits[this.selectedUnit1] * lengthUnits[this.selectedUnit2]
   }
 
 }
