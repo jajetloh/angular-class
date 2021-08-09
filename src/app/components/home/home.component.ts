@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
     { concept: 'Directives', details: 'Angular\'s feature to dynamically manipulate HTML templates.' },
     { concept: 'Services', details: 'Usage of services across components and routes.' },
     { concept: 'Pipes', details: 'Transformation of objects in HTML interpolation.' },
+    { concept: 'Modules', details: 'Basic use of Angular modules to organise code, including Router module.' },
   ]
 
   constructor() {

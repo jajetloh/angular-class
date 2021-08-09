@@ -70,11 +70,14 @@
       The different bindings available can be classified as:
     </p>
     <h3>Source to View (.ts to .html)</h3>
+    <h5>or, Interpolation and Property Binding</h5>
     <div class="d-flex flex-row">
       <div class="w-75 mr-4">
         <p>Variables in the component's .ts file can be dynamically used in the .html.</p>
         <p>Examples of this include:</p>
         <ul>
+          <li>Diplaying the value of the variable: <code>textBold = <b>{{ textBold }}</b></code>. This particular binding
+          uses the syntax <code [innerHTML]="'{{ ... }}'"></code> and is called <b>Interpolation</b>.</li>
           <li>The table on the right, where the table component is bound to the data</li>
           <code>{{table2Data | json}}</code><br/>
           in the .ts file.
