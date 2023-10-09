@@ -11,8 +11,8 @@ import { Subscription } from 'rxjs'
 export class ContainerComponent implements OnInit, OnDestroy {
 
   score: number = 0
-  coinSub: Subscription
-  glowSub: Subscription
+  coinSub?: Subscription
+  glowSub?: Subscription
 
   enableGlow: boolean = false
 
@@ -33,8 +33,8 @@ export class ContainerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.coinSub.unsubscribe()
-    this.glowSub.unsubscribe()
+    this.coinSub!.unsubscribe()
+    this.glowSub!.unsubscribe()
   }
 
 

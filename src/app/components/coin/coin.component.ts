@@ -14,12 +14,12 @@ export class CoinComponent extends GlowableComponent implements OnInit, OnDestro
   @Input() initialType: CoinType = CoinType.Yellow
   @Input() id: any
 
-  type: CoinType
+  type!: CoinType
   CoinType = CoinType
 
   constructor(
     private coinService: CoinService,
-    protected glowService: GlowService
+    protected override glowService: GlowService
   ) {
     super(glowService)
   }
@@ -30,7 +30,7 @@ export class CoinComponent extends GlowableComponent implements OnInit, OnDestro
     this.registerComponent('coin')
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     super.ngOnDestroy()
   }
 

@@ -39,7 +39,7 @@ import { ExerciseOneSolutionComponent } from './exercises/exercise-one-solution/
   ],
   exports: [
     CoinComponent,
-    HomeComponent
+    // HomeComponent
   ]
 })
 export class ComponentsModule {

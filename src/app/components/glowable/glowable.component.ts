@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs'
 })
 export abstract class GlowableComponent implements OnDestroy {
 
-  glowSub: Subscription
+  glowSub?: Subscription
   enableGlow: boolean = false
 
   constructor(
@@ -24,7 +24,7 @@ export abstract class GlowableComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.glowSub.unsubscribe()
+    this.glowSub!.unsubscribe()
   }
 
 }

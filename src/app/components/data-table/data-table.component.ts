@@ -19,12 +19,12 @@ import { GlowService } from '../../services/glow.service'
  * rowIndexing: Set to true to display an index column on the left. False by default.
  */
 export class DataTableComponent extends GlowableComponent implements OnInit, OnDestroy {
-  @Input() data: any[]
-  @Input() properties: string[]
+  @Input() data!: any[]
+  @Input() properties!: string[]
   @Input() rowIndexing = false
 
   constructor(
-    protected glowService: GlowService
+    protected override glowService: GlowService
   ) {
     super(glowService)
   }
@@ -33,7 +33,7 @@ export class DataTableComponent extends GlowableComponent implements OnInit, OnD
     this.registerComponent('table')
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     super.ngOnDestroy()
   }
 

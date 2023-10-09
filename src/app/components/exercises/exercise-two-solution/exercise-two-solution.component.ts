@@ -23,8 +23,8 @@ export class ExerciseTwoSolutionComponent implements OnInit {
   valueOneNumber: number = 1
   valueTwoNumber: number = 1000
 
-  valueOneUnit: string = 'm'
-  valueTwoUnit: string = 'mm'
+  valueOneUnit: keyof typeof lengthUnits = 'm'
+  valueTwoUnit: keyof typeof lengthUnits = 'mm'
 
   lengthUnitsKeys: string[] = Object.keys(lengthUnits)
 

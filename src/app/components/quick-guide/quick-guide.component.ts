@@ -48,7 +48,7 @@ export class QuickGuideComponent extends GlowableComponent implements OnInit, On
   pipeExampleInputs: any[] = ['myString', { name: 'J', value: -9 }, new Date(), new Date()]
 
   constructor(
-    protected glowService: GlowService,
+    protected override glowService: GlowService,
     private route: ActivatedRoute,
   ) {
     super(glowService)
@@ -58,12 +58,12 @@ export class QuickGuideComponent extends GlowableComponent implements OnInit, On
     this.registerComponent('details')
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
-        document.querySelector('#' + fragment).scrollIntoView()
+        document.querySelector('#' + fragment)!.scrollIntoView()
       }
     })
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     super.ngOnDestroy()
   }
 
